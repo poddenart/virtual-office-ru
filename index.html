@@ -1143,6 +1143,7 @@ document.getElementById('lead-form').addEventListener('submit', async function(e
     document.querySelector('.form__sub').style.display = 'none';
     document.querySelector('.form__note').style.display = 'none';
     document.getElementById('form-success').style.display = 'block';
+    if (typeof fbq !== 'undefined') fbq('track', 'Lead');
 
   } catch (err) {
     console.error('Form error:', err);
